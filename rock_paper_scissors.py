@@ -11,7 +11,7 @@ import time
 
 myScore = 0
 compScore = 0
-
+draw = 0
 
 rps = ['r', 's', 'p']
 
@@ -24,6 +24,7 @@ while playAgain == 'y':
     if myChoice[0].lower() == compChoice:
         print('Draw!')
         time.sleep(2)
+        draw = draw + 1
     elif myChoice[0].lower() == 'r' and compChoice == 's':
         print('You chose rock and the computer chose scissors. You win!')
         time.sleep(2)
@@ -56,4 +57,4 @@ while playAgain == 'y':
     if playAgain == 'n':
         print('Thanks bye!')
     if playAgain == 'sc':
-        print('Human ' + str(myScore), 'Computer ' + str(compScore))
+        print('Human ' + str(myScore), 'Computer ' + str(compScore), 'Draw ' + str(draw))
